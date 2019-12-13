@@ -1,0 +1,40 @@
+{
+  "name": "Super Duper Extension",
+  "description": "A Vue.js web extension to disable shitty popups",
+  "version": 0.1,
+  "manifest_version": 2,
+  "icons": {
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "Extension default_title",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "chrome_style": true
+  },
+  "commands": {
+    "save" : {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Q"
+      },
+      "description": "Save a link"
+    },
+    "random": {
+      "suggested_key": {
+        "default": "Alt+Shift+L"
+      },
+      "description": "Load a random link"
+    }
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
